@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic>
+  <topicItem>
+    <ref>topic/topic12.html</ref>
+    <img>img/topic/ozaki01.jpg</img>
+    <title>コンピュータセキュリティシンポジウム2017で尾崎幸也が発表予定</title>
+    <description>山形で開催されるコンピュータセキュリティシンポジウム2017にて，尾崎幸也が悪性URLの強調表示によるDrive-by Download攻撃解析支援手法の提案と称し，Drive-by Download攻撃によって生じた多段のリダイレクト系列を木構造として視覚化し，悪性だと推定されるURLを強調表示することで攻撃の解析支援を行う研究についての発表を行います．</description>
+  </topicItem>
+  <topicItem>
+    <ref>topic/topic11.html</ref>
+    <img>img/topic/semi13.jpg</img>
+    <title>夏の中間報告会開催</title>
+    <description>ゼミ生が研究成果の報告を行う，夏の中間報告会を開催しました．発表7分，質疑応答3分の持ち時間で発表が行われ，活発な議論が繰り広げられました．</description>
+  </topicItem>
+  <topicItem>
+    <ref>topic/topic10.html</ref>
+    <img>img/topic/rapiro01.jpg</img>
+    <title>ゼミ内図書管理システム（Sloth）の開発</title>
+    <description>ゼミ内の書籍と論文誌を検索，貸出，返却を管理するシステムを開発し運用しています．</description>
+  </topicItem>
+  <topicItem>
+    <ref>topic/topic09.html</ref>
+    <img>img/topic/K_campus06.jpg</img>
+    <title>Hack U 2017 OSAKA に参加</title>
+    <description>2017年08月10日(木)～08月25日(金)に実施されたHack U 2017 OSAKA に小林ゼミの4回生が松下ゼミ，村田ゼミの学生とともに参加しました．お互いのプロフィール中の共通部分を表示するiOSアプリケーションを開発し，様々なケースにおけるコミュニケーションの支援を目指しました．</description>
+  </topicItem>
+  <topicItem>
+    <ref>topic/topic08.html</ref>
+    <img>img/topic/B_campus02.jpg</img>
+    <title>第12回情報危機管理コンテスト 文部科学大臣賞受賞・高岡奈央さんがJP CERT/CC賞受賞</title>
+    <description>第12回情報危機管理コンテストに小林ゼミから「KobaIPS」が出場し，文部科学大臣賞を受賞しました．またリーダーの高岡奈央さんがJPCERT/CC賞を受賞しました．</description>
+  </topicItem>
+  <topicItem>
+    <ref>topic/topic07.html</ref>
+    <img>img/topic/semi05.jpg</img>
+    <title>ゼミ内インシデントレスポンス大会開催</title>
+    <description>ゼミ内でインシデントレスポンス大会を開催しました．ゼミ生がサーバホスティングサービスの管理者となり，電話，メール対応を含む実践的なインシデントの対応を行いました．
+    </description>
+  </topicItem>
+  <topicItem>
+    <ref>topic/topic06.html</ref>
+    <img>img/topic/campus03.jpg</img>
+    <title>第11回情報危機管理コンテスト プログレス賞受賞</title>
+    <description>弊ゼミは初回から出場しており，出場するたびに技術力が進歩して来た点が高く評価され，プログレス賞を受賞しました．
+    </description>
+  </topicItem>
+
+  <topicItem>
+    <ref>topic/topic05.html</ref>
+    <img>img/topic/B_campus04.jpg</img>
+    <title>第10回情報危機管理コンテスト 決勝進出</title>
+    <description>初開催以来10年連続で決勝戦に出場するという他に例のない実績を達成することとなりました．情報危機管理コンテストは情報セキュリティ人材を育成することを目的として実施されるコンテスト．参加チームは顧客企業のサーバの管理者となり，リアルタイム発生するインシデントに迅速かつ的確に対処することが求められます．また，インシデントへの対応力のみならず，電話対応を含めた現場対応の適切さもその評価対象となり，実践的なインシデントへの対応力が養われます．最優秀賞には経済産業大臣賞が授与され，同時開催される白浜シンポジウムへの招待を受けることがます．
+    </description>
+  </topicItem>
+  <topicItem>
+    <ref>topic/topic04.html</ref>
+    <img>img/topic/ICTSC01.jpg</img>
+    <title>第4回ICTトラブルシューティングコンテスト 優秀賞受賞</title>
+    <description>2015年8月29日30日にかけて工学院大学で開催された『DMM.COM LABO ツチノコ杯第4回ICTトラブルシューティングコンテスト』において，優秀賞を受賞しました．大学院生2名，学部生2名で構成されたチームで出場し，惜しくも最優秀賞を逃しましたが，満点をもらった問題もあり，学生の成長を垣間見ることができた大会でした．
+    </description>
+  </topicItem>
+  <topicItem>
+    <ref>topic/topic03.html</ref>
+    <img>img/topic/campus01.jpg</img>
+    <title>第9回情報危機管理コンテスト グッドリカバリ賞受賞</title>
+    <description>情報危機管理コンテストは仮想企業のネットワークシステムのコンサルタントとなるという設定で行われる，情報セキュリティを学ぶ学生向けの大会です． 仮想企業に対するアドバイスを行う1次予選、決勝戦と同様のネットワークに接続してトラブル対応を行う2次予選、現場でトラブル対応を行う決勝戦で構成されています．<br/>
+      情報セキュリティの技術的な側面だけでなく，口頭・文書・メール等で顧客企業へ的確なアドバイスを行うなど，現実に起きうるトラブルへの対応能力を競い，最優秀チームには経済産業大臣賞が授与されます．
+    </description>
+  </topicItem>
+  <topicItem>
+    <ref>topic/topic02.html</ref>
+    <img>img/topic/B_campus03.jpg</img>
+    <title>第8回情報危機管理コンテスト アグレッシブ賞受賞</title>
+    <description>情報危機管理コンテストにてアグレッシブ賞を受賞しました． 情報危機管理コンテストは仮想企業のネットワークシステムのコンサルタントとなるという設定で行われる，情報セキュリティを学ぶ学生向けの大会です． 仮想企業に対するアドバイスを行う1次予選、決勝戦と同様のネットワークに接続してトラブル対応を行う2次予選、現場でトラブル対応を行う決勝戦で構成されています．<br/>
+      情報セキュリティの技術的な側面だけでなく，口頭・文書・メール等で顧客企業へ的確なアドバイスを行うなど，現実に起きうるトラブルへの対応能力を競い，最優秀チームには経済産業大臣賞が授与されます． 小林ゼミからはこの度，第1回から連続8回の決勝出場となり，その対応のアグレッシブさが評価され受賞に至りました．</description>
+  </topicItem>
+  <topicItem>
+    <ref>topic/topic01.html</ref>
+    <img>img/topic/whiteboard01.jpg</img>
+    <title>第2回ICTプログラミングコンテスト dwango賞受賞</title>
+    <description>中田恭平さん代表のチームが、第2回 ICTプログラミングコンテスト において、dwango賞を受賞しました。 このコンテストは、次世代ICT界を担う若手技術者を主とする人材の発掘と育成を目指し、情報通信技術を学ぶ学生を対象とするプログラミング競技会で、サーバやネットワークといったインフラシステムの構築運用技術だけではなく、独創性と創造力、そして実装力が競われる大会です。
+      中田さんのチームは、書類審査の予選を経て本選出場の4チームに選ばれ、本選でのプレゼンテーションと作品のデモンストレーションにおいて、プログラミング力，技術力に加え芸術性やエンタテインメント性などが高く評価されました。</description>
+  </topicItem>
+</topic>

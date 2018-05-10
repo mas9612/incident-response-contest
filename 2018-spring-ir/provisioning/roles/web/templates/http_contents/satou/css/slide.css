@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+
+/*CSSスライドショー設定
+---------------------------------------------------------------------------*/
+/*１枚目*/
+@keyframes slide1 {
+	0% {opacity: 0;}
+	10% {opacity: 1;}
+	30% {opacity: 1;}
+	40% {opacity: 0;}
+	100% {opacity: 0;}
+}
+/*２枚目*/
+@keyframes slide2 {
+	0% {opacity: 0;}
+	20% {opacity: 0;}
+	30% {opacity: 1;}
+	60% {opacity: 1;}
+	70% {opacity: 0;}
+	100% {opacity: 0;}
+}
+/*３枚目*/
+@keyframes slide3 {
+	0% {opacity: 0;}
+	50% {opacity: 0;}
+	60% {opacity: 1;}
+	85% {opacity: 1;}
+	95% {opacity: 0;}
+	100% {opacity: 0;}
+}
+
+/*mainimg
+---------------------------------------------------------------------------*/
+/*画像ブロック*/
+#mainimg {
+	clear: left;
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+	top: -165px;	/*style.cssのheaderのheight(100px)と、#menubarのheight(45px)とpadding(10px+10px)の合計を設定する。※ここのマイナス記号はつけたままに。*/
+	-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.5);	/*影の設定。右・下・ぼかし幅・色(rgba)の設定。rgba値は左３つが色指定(この場合は黒)で最後の小数点が透明度。*/
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.5);			/*同上*/
+}
+/*３枚画像の共通設定*/
+#slide1,#slide2,#slide3 {
+	-webkit-animation-duration: 15s;	/*実行する時間。「s」は秒の事。*/
+	animation-duration: 15s;			/*同上*/
+	-webkit-animation-iteration-count:infinite;	/*実行する回数。「infinite」は無限に繰り返す意味。*/
+	animation-iteration-count:infinite;			/*同上*/
+	position: absolute;left:0px;top:0px;width: 100%;height: auto;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-delay: 2s;
+	animation-delay: 2s;
+}
+/*土台画像*/
+#slide0 {
+	position: relative;width: 100%;height: auto;
+}
+/*１枚目*/
+#slide1 {
+	-webkit-animation-name: slide1;		/*上で設定しているキーフレーム（keyframes）の名前*/
+	animation-name: slide1;				/*同上*/
+}
+/*２枚目*/
+#slide2 {
+	-webkit-animation-name: slide2;		/*上で設定しているキーフレーム（keyframes）の名前*/
+	animation-name: slide2;				/*同上*/
+}
+/*３枚目*/
+#slide3 {
+	-webkit-animation-name: slide3;
+	animation-name: slide3;
+}
+
+
+
+/*画面幅480px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:480px){
+
+/*画像ブロック。
+そのままの設定を引き継ぐと小さな端末で見た場合にロゴが画像より下側に
+はみ出る場合があるので、一旦幅を150%にして中央のみ切り抜いています。
+---------------------------------------------------------------------------*/
+#mainimg {
+	width: 150%;
+	left: -25%;
+}
+
+}

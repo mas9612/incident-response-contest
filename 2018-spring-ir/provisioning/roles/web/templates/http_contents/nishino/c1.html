@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>カフェ向け無料ホームページテンプレート tp_cafe13</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ここにサイト説明を入れます">
+<meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５">
+<link rel="stylesheet" href="css/style.css">
+<script type="text/javascript" src="js/openclose.js"></script>
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="c1">
+
+<header>
+<div class="inner">
+<h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="Sample Cafe"/></a></h1>
+<!--PC用（571px以上端末）メニュー-->
+<nav id="menubar">
+<ul>
+<li><a href="index.html">HOME</a></li>
+<li><a href="menu.html">MENU</a></li>
+<li><a href="access.html">ACCESS</a></li>
+<li><a href="recruit.html">RECRUIT</a></li>
+</ul>
+</nav>
+<!--小さな端末用（※570px以下端末）メニュー-->
+<nav id="menubar-s">
+<ul>
+<li><a href="index.html">HOME</a></li>
+<li><a href="menu.html">MENU</a></li>
+<li><a href="access.html">ACCESS</a></li>
+<li><a href="recruit.html">RECRUIT</a></li>
+</ul>
+</nav>
+</div>
+<!--/inner-->
+</header>
+
+<div id="contents">
+
+<div class="inner">
+
+<div id="main">
+
+<section>
+
+<h2>１カラムレイアウト</h2>
+<p>&lt;body&gt;を&lt;body class=&quot;c1&quot;&gt;にすると１カラムレイアウトになります。<br>
+トップページなどid名がついている場合は、&lt;body id=&quot;top&quot; class=&quot;c1&quot;&gt;です。<br>
+すでにclass指定が入っている場合は、&lt;body class=&quot;sample c1&quot;&gt;など半角スペースを入れて指定します。</p>
+
+<h2>ずっと１カラムで使う場合は</h2>
+<p>上のclass指定をしてもhtml上にsubブロックは残るので、subブロックを使わない場合はsubブロックのhtmlごと削除して下さい。</p>
+
+</section>
+
+<section>
+
+<h2>MENU（コンパクトレイアウト）</h2>
+<p>下の方にある横長レイアウトは<span class="color1">&lt;section class=&quot;list&quot;&gt;</span>ですが、<span class="color1">&lt;section class=&quot;list compact&quot;&gt;</span>にするとこのようにコンパクトボックスになります。</p>
+
+<section class="list compact">
+<figure><img src="images/sample1.jpg" alt="写真の説明"></figure>
+<h4>タイトル 1,000円</h4>
+<p>今週の日替わりランチです。</p>
+</section>
+
+<section class="list compact">
+<figure><img src="images/sample1.jpg" alt="写真の説明"></figure>
+<h4>タイトル 1,000円</h4>
+<p>&lt;span class=&quot;osusume&quot;&gt;おすすめ&lt;/span&gt;とするとボックス左上に「おすすめ」マークが出ます。</p>
+<span class="osusume">おすすめ</span>
+</section>
+
+<section class="list compact">
+<figure><img src="images/sample1.jpg" alt="写真の説明"></figure>
+<h4>タイトル 1,000円</h4>
+<p>「おすすめ」のテキストは直接htmlで入れ替えできますが、文字数が増えると切れるのでstyle.cssで調整して下さい。</p>
+<span class="osusume">おすすめ</span>
+</section>
+
+<section class="list compact">
+<figure><img src="images/sample1.jpg" alt="写真の説明"></figure>
+<h4>タイトル 1,000円</h4>
+<p>「タイトル」の左に入っている王冠マークもstyle.cssで指定しています。</p>
+</section>
+
+<section class="list compact">
+<figure><img src="images/sample1.jpg" alt="写真の説明"></figure>
+<h4>タイトル 1,000円</h4>
+<p>サンプルテキスト。</p>
+</section>
+
+<section class="list compact">
+<figure><img src="images/sample1.jpg" alt="写真の説明"></figure>
+<h4>タイトル 1,000円</h4>
+<p>今週の日替わりランチです。<br>
+コンパクトタイプは沢山の文字を詰め込みすぎると途中で切れて見えなくなります。コンパクトタイプは沢山の文字を詰め込みすぎると途中で切れて見えなくなります。</p>
+</section>
+
+<h2>MENU（横長レイアウト）</h2>
+
+<section class="list">
+<figure><img src="images/sample1.jpg" alt="写真の説明"></figure>
+<h4>タイトル 1,000円</h4>
+<p>今週の日替わりランチです。</p>
+</section>
+
+<section class="list">
+<figure><img src="images/sample1.jpg" alt="写真の説明"></figure>
+<h4>タイトル 1,000円</h4>
+<p>&lt;span class=&quot;osusume&quot;&gt;おすすめ&lt;/span&gt;とするとボックス左上に「おすすめ」マークが出ます。「おすすめ」のテキストは直接htmlで入れ替えできますが、文字数が増えると切れるのでstyle.cssで調整して下さい。色もcssで変更できます。</p>
+<span class="osusume">おすすめ</span>
+</section>
+
+<section class="list">
+<figure><img src="images/sample1.jpg" alt="写真の説明"></figure>
+<h4>タイトル 1,000円</h4>
+<p>「タイトル」の左に入っている王冠マークもstyle.cssで指定しています。</p>
+</section>
+
+<section class="list">
+<figure><img src="images/sample1.jpg" alt="写真の説明"></figure>
+<h4>タイトル 1,000円</h4>
+<p>サンプルテキスト。</p>
+</section>
+
+</section>
+
+</div>
+<!--/main-->
+
+<div id="sub">
+
+<nav>
+<h2>Sub Menu</h2>
+<ul class="submenu">
+<li><a href="#">Menu</a></li>
+<li><a href="#">Menu</a></li>
+<li><a href="#">Menu</a></li>
+<li><a href="#">Menu</a></li>
+<li><a href="#">Menu</a></li>
+<li><a href="#">Menu</a></li>
+</ul>
+</nav>
+
+</div>
+<!--/sub-->
+
+<p id="pagetop"><a href="#">↑</a></p>
+
+<footer>
+<small>Copyright&copy; <a href="index.html">Sample Cafe</a> All Rights Reserved.</small>
+<span class="pr"><a href="http://template-party.com/" target="_blank">Web Design:Template-Party</a></span>
+</footer>
+
+</div>
+<!--/inner-->
+
+</div>
+<!--/contents-->
+
+<!--メニューの３本バー-->
+<div id="menubar_hdr" class="close"><span></span><span></span><span></span></div>
+<!--メニューの開閉処理条件設定　570px以下-->
+<script type="text/javascript">
+if (OCwindowWidth() <= 570) {
+	open_close("menubar_hdr", "menubar-s");
+}
+</script>
+</body>
+</html>

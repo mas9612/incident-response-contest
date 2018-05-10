@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<indexSlide>
+
+  <slideItem>
+    <ref>office_hour.html</ref>
+    <img>img/slider/dummy3.jpg</img>
+    <title>オフィスアワー開催</title>
+    <description>2018年度オフィスアワーが開催されます．小林研究室への配属を希望される学生さんへ向けて小林先生からメッセージをいただいております．日程，資料など，詳しくは特設ページへ．</description>
+  </slideItem>
+  <slideItem>
+    <ref>topic/topic08.html</ref>
+    <img>img/slider/dummy2.jpg</img>
+    <title>第12回情報危機管理コンテスト 文部科学大臣賞受賞・高岡奈央さんがJP CERT/CC賞受賞</title>
+    <description>情報危機管理コンテストは情報セキュリティ人材を育成することを目的として実施されるコンテスト．参加チームは顧客企業のサーバの管理者となり，リアルタイム発生するインシデントに迅速かつ的確に対処することが求められます．</description>
+  </slideItem>
+  <slideItem>
+    <ref>topic/topic09.html</ref>
+    <img>img/topic/K_campus06.jpg</img>
+    <title>Hack U 2017 OSAKA に参加</title>
+    <description>Hack U 2017 OSAKA に小林ゼミの4回生が松下ゼミ，村田ゼミの学生とともに参加しました．お互いのプロフィール中の共通部分を表示するiOSアプリケーションを開発し，様々なケースにおけるコミュニケーションの支援を目指しました．</description>
+  </slideItem>
+  <slideItem>
+    <ref>#</ref>
+    <img>img/slider/dummy4.jpg</img>
+    <title>ゼミサイトのリプレース</title>
+    <description>関西大学　総合情報学部　セキュア情報システム研究室（小林研究室）のウェブサイトをリプレースいたしました．ゼミ内外での活動に関して，こちらのサイトで今後ともご報告させていただきます．</description>
+  </slideItem>
+</indexSlide>

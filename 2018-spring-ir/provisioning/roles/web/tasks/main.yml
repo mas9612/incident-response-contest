@@ -1,4 +1,4 @@
-- name: Copy HTTP contents for each user
+# - name: Copy HTTP contents for each user
 
 - name: Install Apache (CentOS)
   yum:
@@ -7,11 +7,14 @@
 
 - name: Copy Apache config files (CentOS)
   copy:
-    src: template/httpd.conf
-    dest: /etc/httpd/conf/httpd.conf
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
     mode: 0644
     owner: root
     group: root
+  with_items:
+    - {src: "templates/httpd.conf", dest: "/etc/httpd/conf/httpd.conf"}
+    - {src: "templates/userdir.conf", dest: "/etc/httpd/conf.d/userdir.conf"}
 
 - name: Start and Enable Apache (CentOS)
   systemd:

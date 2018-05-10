@@ -44,7 +44,7 @@
 
 - name: Disable SELinux (CentOS)
   copy:
-    src: template/selinux.config
+    src: templates/selinux.config
     dest: /etc/selinux/config
     mode: 0644
     owner: root

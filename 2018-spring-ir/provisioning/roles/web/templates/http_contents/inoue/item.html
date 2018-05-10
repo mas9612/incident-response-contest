@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>企業向けデザイン 無料ホームページテンプレート tp_biz49</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ここにサイト説明を入れます">
+<meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/slide.css">
+<link rel="stylesheet" href="css/fixmenu_pagetop.css">
+<script type="text/javascript" src="js/openclose.js"></script>
+<script type="text/javascript" src="js/fixmenu_pagetop.js"></script>
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="s-n">
+
+<div id="container">
+
+<header>
+<h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="Sample Company"></a></h1>
+<!--PC用（801px以上端末）メニュー-->
+<nav id="menubar">
+<ul>
+<li><a href="index.html">Home<span>ホーム</span></a></li>
+<li><a href="company.html">Company<span>会社概要</span></a></li>
+<li><a href="service.html">Service<span>サービス</span></a></li>
+<li><a href="recruit.html">Recruit<span>採用情報</span></a></li>
+<li><a href="contact.html">Contact<span>お問合せ</span></a></li>
+</ul>
+</nav>
+</header>
+
+<!--小さな端末用（800px以下端末）メニュー-->
+<nav id="menubar-s">
+<ul>
+<li><a href="index.html">Home<span>ホーム</span></a></li>
+<li><a href="company.html">Company<span>会社概要</span></a></li>
+<li><a href="service.html">Service<span>サービス</span></a></li>
+<li><a href="recruit.html">Recruit<span>採用情報</span></a></li>
+<li><a href="contact.html">Contact<span>お問合せ</span></a></li>
+</ul>
+</nav>
+
+<div id="contents">
+
+<div id="main">
+
+<article>
+
+<h2>サービス名</h2>
+<p>800px以下の画面幅で見た場合、サブブロックが非表示になります。その他のページでも非表示にしたい場合、html側の&lt;body&gt;タグを&lt;body class=&quot;s-n&quot;&gt;として下さい。もしclass指定が２つ以上ある場合は半角スペースで区切って入力すればOKです。</p>
+
+<figure>
+<img src="images/sample1.jpg" alt="">
+</figure>
+
+</article>
+
+<p><a href="javascript:history.back()">&lt;&lt; 前のページに戻る</a></p>
+
+</div>
+<!--/main-->
+
+<div id="sub">
+
+<nav>
+<h2>Menu</h2>
+<ul class="submenu">
+<li><a href="faq.html">よく頂く質問</a></li>
+<li><a href="link.html">リンク</a></li>
+<li><a href="#">メニュー</a></li>
+<li><a href="#">メニュー</a></li>
+<li><a href="#">メニュー</a></li>
+</ul>
+</nav>
+
+<section class="mb20">
+
+<h2>サービスのご案内</h2>
+
+    <div class="list">
+    <a href="item.html">
+    <figure><img src="images/sample1.jpg" alt="サービス名"></figure>
+    <h4>サービス名</h4>
+    <p>サービスの簡単な説明をここに入れます。</p>
+    </a>
+    </div>
+    
+    <div class="list">
+    <a href="item.html">
+    <figure><img src="images/sample1.jpg" alt="サービス名"></figure>
+    <h4>サービス名</h4>
+    <p>サービスの簡単な説明をここに入れます。</p>
+    </a>
+    </div>
+    
+    <div class="list">
+    <a href="item.html">
+    <figure><img src="images/sample1.jpg" alt="サービス名"></figure>
+    <h4>サービス名</h4>
+    <p>サービスの簡単な説明をここに入れます。</p>
+	</a>
+    </div>
+    
+    <div class="list">
+    <a href="item.html">
+    <figure><img src="images/sample1.jpg" alt="サービス名"></figure>
+    <h4>サービス名</h4>
+    <p>サービスの簡単な説明をここに入れます。</p>
+    </a>
+    </div>
+
+</section>
+
+<section class="box">
+<h2>h2見出し</h2>
+<p>class=&quot;box&quot;とするとこのボックスが出ます。<br>
+上の「Menu」に適用するなら&lt;nav&gt;を&lt;nav class=&quot;box&quot;&gt;にすればOK。<br>
+「サービスのご案内」のように既にclass指定が入っている場合は半角スペースで区切って追加すればOKです。&lt;section class=&quot;mb20 box&quot;&gt;</p>
+</section>
+
+</div>
+<!--/sub-->
+
+</div>
+<!--/contents-->
+
+</div>
+<!--/container-->
+
+<footer>
+<small>Copyright&copy; <a href="index.html">Sample Company</a> All Rights Reserved.</small>
+<span class="pr"><a href="http://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+</footer>
+
+<p class="nav-fix-pos-pagetop"><a href="#">↑</a></p>
+
+<!--メニュー開閉ボタン-->
+<div id="menubar_hdr" class="close"></div>
+<!--メニューの開閉処理条件設定　800px以下-->
+<script type="text/javascript">
+if (OCwindowWidth() <= 800) {
+	open_close("menubar_hdr", "menubar-s");
+}
+</script>
+</body>
+</html>
