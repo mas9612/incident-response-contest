@@ -1,4 +1,4 @@
-# 2018 Spring Incident Response Contest (Part 2)
+# 2018 Spring Incident Response Contest (2nd)
 
 ## Directory
 * `scenarios/` : description of each scenario
