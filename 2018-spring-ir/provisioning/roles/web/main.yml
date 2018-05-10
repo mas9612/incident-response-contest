@@ -1,0 +1,29 @@
+- name: Copy HTTP contents for each user
+
+- name: Install Apache (CentOS)
+  yum:
+    name: httpd
+  when: ansible_distribution == "CentOS"
+
+- name: Copy Apache config files (CentOS)
+  copy:
+    src: template/httpd.conf
+    dest: /etc/httpd/conf/httpd.conf
+    mode: 0644
+    owner: root
+    group: root
+
+- name: Start and Enable Apache (CentOS)
+  systemd:
+    name: httpd.service
+    enabled: yes
+    state: started
+  when: ansible_distribution == "CentOS"
+
+- name: Allow HTTP (CentOS)
+  firewalld:
+    service: http
+    state: enabled
+    permanent: true
+    immediate: true
+  when: ansible_distribution == "CentOS"

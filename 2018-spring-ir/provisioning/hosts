@@ -1,0 +1,11 @@
+# Note: each server must have `koba` user to execute ansible tasks
+
+# serve external services (hosting server)
+[web-freebsd]
+
+# serve internal services
+[web-centos]
+
+[dns]
+
+[mail]

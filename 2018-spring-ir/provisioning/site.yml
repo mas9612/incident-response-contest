@@ -1,0 +1,16 @@
+- hosts:
+  - web-freebsd
+  - web-centos
+  roles:
+    - common
+    - web
+
+- hosts: dns
+  roles:
+    - common
+    - dns
+
+- hosts: mail
+  roles:
+    - common
+    - mail

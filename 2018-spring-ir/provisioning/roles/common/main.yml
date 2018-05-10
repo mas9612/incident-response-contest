@@ -1,0 +1,52 @@
+- name: Install epel repository (CentOS)
+  yum:
+    name: epel-release
+  when: ansible_distribution == "CentOS"
+
+- name: Update all packages (CentOS)
+  yum:
+    name: '*'
+    state: latest
+  when: ansible_distribution == "CentOS"
+
+- name: Install base packages (CentOS)
+  yum:
+    name: "{{ item }}"
+  with_items:
+    - chrony
+    - firewalld
+    - vim
+  when: ansible_distribution == "CentOS"
+
+- name: Install SELinux Library
+  yum:
+    name: libselinux-python
+  when: ansible_selinux != false
+
+- name: Copy chrony.conf (CentOS)
+  copy:
+    src: templates/chrony.conf
+    dest: /etc/chrony.conf
+    mode: 0644
+    owner: root
+    group: root
+  when: ansible_distribution == "CentOS"
+
+- name: Start and Enable services (CentOS)
+  systemd:
+    name: "{{ item }}"
+    enabled: yes
+    state: started
+  with_items:
+    - chronyd.service
+    - firewalld.service
+  when: ansible_distribution == "CentOS"
+
+- name: Disable SELinux (CentOS)
+  copy:
+    src: template/selinux.config
+    dest: /etc/selinux/config
+    mode: 0644
+    owner: root
+    group: root
+  when: ansible_distribution == "CentOS"
