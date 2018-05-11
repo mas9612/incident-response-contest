@@ -3,7 +3,7 @@
 cd `dirname $0`
 
 # TODO: to be able to give these value as command line args
-USER=koba
+USER=shiraishi
 HOST=10.1.240.131
 
 # crack shiraishi's password with hydra
