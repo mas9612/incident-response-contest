@@ -42,7 +42,11 @@
     - firewalld.service
   when: ansible_distribution == "CentOS"
 
-- name: Disable SELinux (CentOS)
+- name: Disable SELinux - setenforce (CentOS)
+  shell: setenforce 0
+  when: ansible_distribution == "CentOS"
+
+- name: Disable SELinux - Copy config file (CentOS)
   copy:
     src: templates/selinux.config
     dest: /etc/selinux/config
