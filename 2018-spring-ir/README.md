@@ -32,9 +32,12 @@
 2018/05/xx
 
 ## Servers
+* Web (FreeBSD)
+* DNS (FreeBSD)
+* Mail (FreeBSD, CentOS)
 
 ## Scenarios
-1. [xxxxx](scenario/xxxxx.md)
-1. [xxxxx](scenario/xxxxx.md)
-1. [xxxxx](scenario/xxxxx.md)
+1. [ページ内の画像が表示されない](scenario/file-permission/README.md)
+1. [Webページが開けない](scenario/dos-attack/README.md)
+1. [SSHでログインできない](scenario/cannot-ssh-login/README.md)
 1. [xxxxx](scenario/xxxxx.md)
