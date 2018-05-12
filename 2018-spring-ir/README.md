@@ -7,25 +7,36 @@
     - `roles/` : Ansible roles
 ```
 .
-├── README.md
 ├── provisioning
-│   ├── hosts
-│   ├── roles
-│   │   ├── common
-│   │   │   ├── main.yml
-│   │   │   └── templates
-│   │   │       └── selinux.config
-│   │   ├── dns
-│   │   │   ├── main.yml
-│   │   │   └── templates
-│   │   ├── mail
-│   │   │   ├── main.yml
-│   │   │   └── templates
-│   │   └── web
-│   │       ├── main.yml
-│   │       └── templates
-│   └── site.yml
-└── scenarios
+│   └── roles
+│       ├── common
+│       │   ├── tasks
+│       │   └── templates
+│       ├── dns
+│       │   ├── tasks
+│       │   └── templates
+│       ├── mail
+│       │   ├── tasks
+│       │   └── templates
+│       └── web
+│           ├── tasks
+│           └── templates
+│               └── http_contents
+│                   ├── hayashi
+│                   ├── inoue
+│                   ├── kobayasi
+│                   ├── kojima
+│                   ├── nishino
+│                   ├── satou
+│                   ├── shiraishi
+│                   ├── takei
+│                   ├── tanaka
+│                   └── yamamoto
+├── scenarios
+│   ├── cannot-ssh-login
+│   ├── dos-attack
+│   └── file-permission
+└── util
 ```
 
 ## Contest Date

@@ -20,3 +20,8 @@ Victor (CentOS)
 * ログインパスワードの変更
 * `~/.bashrc` に追加された `exit` の削除
 * `~/.ssh/authorized_keys` に追加された攻撃者の公開鍵を削除
+
+## 問題発火
+```sh
+$ sh fire.sh
+```
