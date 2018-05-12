@@ -1,0 +1,18 @@
+- hosts: remote
+  tasks:
+  - name: Copy files to remote server
+    copy:
+      src: "{{ item.src }}"
+      dest: "{{ item.dest }}"
+      mode: 0644
+      owner: kobayasi
+      group: kobayasi
+    with_items:
+      - { src: "topic14.html", dest: "/home/kobayasi/public_html/topic/" }
+      - { src: "switch01.jpg", dest: "/home/kobayasi/public_html/img/topic/" }
+      - { src: "topic.xml", dest: "/home/kobayasi/public_html/topic.xml" }
+
+  - name: Change file permission
+    file:
+      mode: 0600
+      path: /home/kobayasi/public_html/img/topic/switch01.jpg

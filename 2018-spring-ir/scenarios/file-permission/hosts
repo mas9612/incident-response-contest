@@ -1,0 +1,2 @@
+[remote]
+10.1.240.102 ansible_user=kobayasi ansible_python_interpreter=/usr/local/bin/python2.7
