@@ -1,0 +1,33 @@
+- name: Install BIND
+  pkgng:
+    name: bind912
+    state: present
+  when: ansible_distribution == "FreeBSD"
+
+- name: Copy named.conf
+  copy:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    mode: 0644
+    owner: root
+    group: wheel
+  with_items:
+    - { src: "templates/named.conf", dest: "/usr/local/etc/namedb/named.conf" }
+  when: ansible_distribution == "FreeBSD"
+
+- name: Copy DB files
+  copy:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    mode: 0644
+    owner: root
+    group: wheel
+  with_items:
+    - { src: "templates/db.ir.local", dest: "/usr/local/etc/namedb/master/db.ir.local" }
+    - { src: "templates/db.10.1.251", dest: "/usr/local/etc/namedb/master/db.10.1.251" }
+
+- name: Start and Enable named service
+  service:
+    name: named
+    enabled: yes
+    state: restarted

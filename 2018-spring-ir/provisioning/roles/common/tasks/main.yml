@@ -18,10 +18,19 @@
     - vim
   when: ansible_distribution == "CentOS"
 
+- name: Install base packages (FreeBSD)
+  pkgng:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - vim
+  when:
+    ansible_distribution == "FreeBSD"
+
 - name: Install SELinux Library
   yum:
     name: libselinux-python
-  when: ansible_selinux != false
+  when: ansible_distribution == "CentOS"
 
 - name: Copy chrony.conf (CentOS)
   copy:
