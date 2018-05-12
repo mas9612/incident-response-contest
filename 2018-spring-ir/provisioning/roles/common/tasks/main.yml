@@ -63,3 +63,20 @@
     owner: root
     group: root
   when: ansible_distribution == "CentOS"
+
+- name: Add users
+  user:
+    name: "{{ item.name }}"
+    shell: "{{ item.shell }}"
+    password: "{{ item.password | password_hash('sha512') }}"
+  with_items:
+    - { name: "hayashi",   shell: "/bin/sh", password: "jafb7537am" }
+    - { name: "inoue",     shell: "/bin/sh", password: "Co39ke117426" }
+    - { name: "kobayasi",  shell: "/bin/sh", password: "865f4db6cf" }
+    - { name: "kojima",    shell: "/bin/sh", password: "alesdfaxb1_NOBLE" }
+    - { name: "nishino",   shell: "/bin/sh", password: "fuckme3n_troy" }
+    - { name: "satou",     shell: "/bin/sh", password: "diaz107asdf929" }
+    - { name: "shiraishi", shell: "/bin/sh", password: "awachan4410" }
+    - { name: "takei",     shell: "/bin/sh", password: "coppebansr2222" }
+    - { name: "tanaka",    shell: "/bin/sh", password: "smm4liasdlfe" }
+    - { name: "yamamoto",  shell: "/bin/sh", password: "c8aeoaiweu3z" }

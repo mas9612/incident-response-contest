@@ -22,24 +22,6 @@
     state: started
   when: ansible_distribution == "FreeBSD"
 
-- name: Add users
-  user:
-    name: "{{ item.name }}"
-    shell: "{{ item.shell }}"
-    password: "{{ item.password | password_hash('sha512') }}"
-  with_items:
-    - { name: "hayashi",   shell: "/bin/csh", password: "jafb7537am" }
-    - { name: "inoue",     shell: "/bin/csh", password: "Co39ke117426" }
-    - { name: "kobayasi",  shell: "/bin/csh", password: "865f4db6cf" }
-    - { name: "kojima",    shell: "/bin/csh", password: "alesdfaxb1_NOBLE" }
-    - { name: "nishino",   shell: "/bin/csh", password: "fuckme3n_troy" }
-    - { name: "satou",     shell: "/bin/csh", password: "diaz107asdf929" }
-    - { name: "shiraishi", shell: "/bin/csh", password: "awachan4410" }
-    - { name: "takei",     shell: "/bin/csh", password: "coppebansr2222" }
-    - { name: "tanaka",    shell: "/bin/csh", password: "smm4liasdlfe" }
-    - { name: "yamamoto",  shell: "/bin/csh", password: "c8aeoaiweu3z" }
-  when: ansible_distribution == "FreeBSD"
-
 - name: Change permission for each user's home directory
   file:
     path: /home/{{ item }}
