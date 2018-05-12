@@ -1,0 +1,32 @@
+- name: Install Apache (CentOS)
+  yum:
+    name: httpd
+  when: ansible_distribution == "CentOS"
+
+- name: Copy Apache config files (CentOS)
+  copy:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    mode: 0644
+    owner: root
+    group: root
+  with_items:
+    - { src: "templates/centos-httpd.conf", dest: "/etc/httpd/conf/centos-httpd.conf" }
+    - { src: "templates/centos-userdir.conf", dest: "/etc/httpd/conf.d/centos-userdir.conf" }
+  when: ansible_distribution == "CentOS"
+
+- name: Start and Enable Apache (CentOS)
+  systemd:
+    name: httpd.service
+    enabled: yes
+    state: started
+  when: ansible_distribution == "CentOS"
+
+- name: Allow HTTP (CentOS)
+  firewalld:
+    service: http
+    state: enabled
+    permanent: true
+    immediate: true
+  when: ansible_distribution == "CentOS"
+

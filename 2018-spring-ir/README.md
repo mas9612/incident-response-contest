@@ -28,7 +28,7 @@
 └── scenarios
 ```
 
-## Date
+## Contest Date
 2018/05/xx
 
 ## Servers
@@ -41,3 +41,12 @@
 1. [Webページが開けない](scenarios/dos-attack/README.md)
 1. [SSHでログインできない](scenarios/cannot-ssh-login/README.md)
 1. [xxxxx](scenarios/xxxxx.md)
+
+## Provisioning
+### Prerequisites
+* FreeBSD
+    - Install python, sudo
+    ```sh
+    $ pkg install python27 sudo
+    ```
+    - Edit `/usr/local/etc/sudoers` with `visudo` to be able to use `sudo`

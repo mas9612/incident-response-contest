@@ -1,0 +1,96 @@
+- name: Install Apache (FreeBSD)
+  pkgng:
+    name: apache24
+    state: present
+  when: ansible_distribution == "FreeBSD"
+
+- name: Copy Apache config files (FreeBSD)
+  copy:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    mode: 0644
+    owner: root
+    group: wheel
+  with_items:
+    - { src: "templates/freebsd-httpd.conf", dest: "/usr/local/etc/apache24/httpd.conf" }
+  when: ansible_distribution == "FreeBSD"
+
+- name: Start and Enable Apache (FreeBSD)
+  service:
+    name: apache24
+    enabled: yes
+    state: started
+  when: ansible_distribution == "FreeBSD"
+
+- name: Add users
+  user:
+    name: "{{ item.name }}"
+    shell: "{{ item.shell }}"
+    password: "{{ item.password | password_hash('sha512') }}"
+  with_items:
+    - { name: "hayashi",   shell: "/bin/csh", password: "jafb7537am" }
+    - { name: "inoue",     shell: "/bin/csh", password: "Co39ke117426" }
+    - { name: "kobayasi",  shell: "/bin/csh", password: "865f4db6cf" }
+    - { name: "kojima",    shell: "/bin/csh", password: "alesdfaxb1_NOBLE" }
+    - { name: "nishino",   shell: "/bin/csh", password: "fuckme3n_troy" }
+    - { name: "satou",     shell: "/bin/csh", password: "diaz107asdf929" }
+    - { name: "shiraishi", shell: "/bin/csh", password: "awachan4410" }
+    - { name: "takei",     shell: "/bin/csh", password: "coppebansr2222" }
+    - { name: "tanaka",    shell: "/bin/csh", password: "smm4liasdlfe" }
+    - { name: "yamamoto",  shell: "/bin/csh", password: "c8aeoaiweu3z" }
+  when: ansible_distribution == "FreeBSD"
+
+- name: Change permission for each user's home directory
+  file:
+    path: /home/{{ item }}
+    mode: 0701
+  with_items:
+    - hayashi
+    - inoue
+    - kobayasi
+    - kojima
+    - nishino
+    - satou
+    - shiraishi
+    - takei
+    - tanaka
+    - yamamoto
+  when: ansible_distribution == "FreeBSD"
+
+- name: Copy HTTP contents for each user
+  copy:
+    src: templates/http_contents/{{ item }}/
+    dest: /home/{{ item }}/public_html
+    owner: "{{ item }}"
+    group: "{{ item }}"
+  with_items:
+    - hayashi
+    - inoue
+    - kobayasi
+    - kojima
+    - nishino
+    - satou
+    - shiraishi
+    - takei
+    - tanaka
+    - yamamoto
+  when: ansible_distribution == "FreeBSD"
+
+- name: Change public_html owner/group/permission for each user
+  file:
+    path: /home/{{ item }}/public_html
+    mode: 0701
+    owner: "{{ item }}"
+    group: "{{ item }}"
+  with_items:
+    - hayashi
+    - inoue
+    - kobayasi
+    - kojima
+    - nishino
+    - satou
+    - shiraishi
+    - takei
+    - tanaka
+    - yamamoto
+  when: ansible_distribution == "FreeBSD"
