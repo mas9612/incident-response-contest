@@ -21,8 +21,10 @@ Webページ（ `bravo` , FreeBSD）にアクセスしてからページが表�
 
 ## 問題発火
 ```sh
-# Note: This Dockerfile uses multi stage build
-#       You need to use at least Docker 17.05
-$ docker build -t slowhttptest .
 $ sudo ./dnsflood asdf.asdf.asdf.asdf.com TARGETIP -t ANY -s 10.1.240.123 -p 53
 ```
+
+
+<!-- # Note: This Dockerfile uses multi stage build -->
+<!-- #       You need to use at least Docker 17.05 -->
+<!-- $ docker build -t slowhttptest . -->
