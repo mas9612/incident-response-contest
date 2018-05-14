@@ -43,15 +43,21 @@
 2018/05/xx
 
 ## Servers
-* Web (FreeBSD)
+* Web (FreeBSD, CentOS)
 * DNS (FreeBSD)
-* Mail (FreeBSD, CentOS)
+* Mail (FreeBSD)
 
 ## Scenarios
 1. [ページ内の画像が表示されない](scenarios/file-permission/README.md)
 1. [Webページが開けない](scenarios/dos-attack/README.md)
 1. [SSHでログインできない](scenarios/cannot-ssh-login/README.md)
 1. [xxxxx](scenarios/xxxxx.md)
+
+## Bootstrapping
+* CentOS (CentOS 7)
+    - KickStart script
+    - https://www.firefly.kutc.kansai-u.ac.jp/~k800123/180510-ir-anaconda-ks.cfg
+        - can access from only seminar network
 
 ## Provisioning
 ### Prerequisites
