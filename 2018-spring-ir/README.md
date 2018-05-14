@@ -44,6 +44,8 @@
 
 ## Servers
 * Web (FreeBSD, CentOS)
+    - FreeBSD: `bravo`
+    - CentOS: `victor`
 * DNS (FreeBSD)
 * Mail (FreeBSD)
 

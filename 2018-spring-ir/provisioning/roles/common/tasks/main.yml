@@ -16,6 +16,7 @@
     - chrony
     - firewalld
     - vim
+    - bind-utils
   when: ansible_distribution == "CentOS"
 
 - name: Install base packages (FreeBSD)
