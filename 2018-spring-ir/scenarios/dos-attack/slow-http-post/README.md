@@ -4,26 +4,20 @@
 Webページ（ `bravo` , FreeBSD）にアクセスしてからページがなかなか表示されない
 
 ## 対象ユーザ
-* DNSサーバ利用者全員
+* `bravo` 使用者全員
 
 ## 報告者
 * CEO
-    - 複数の社員から，Webページにアクセスしてからページがなかなか表示されないという報告があった
+    - 複数の利用者から，Webページにアクセスしてからページが表示されないという報告があった
 
 ## 対象サーバ
 * `bravo` (FreeBSD)
 
 ## 問題の原因
-### DNS Floodのシナリオの場合
-* DNSサーバがDNS Flood攻撃を受けているため，名前解決に時間がかかってページの表示までに時間がかかっていた
-
-### HTTP DoSのシナリオの場合
+`bravo` がSlow HTTP POST攻撃を受けており， `MaxRequestWorkers` の上限までソケットが使い果たされていた．
+そのため，新規の接続ができずにページがなかなか表示されなかった．
 
 ## 対応
-### DNS Flood対策
-* DNS Flood攻撃を行っているホストからの通信をファイアウォールで遮断する
-
-### HTTP DoS対策
 * Apache側で，Timeout関連の設定を確認する
     - `httpd.conf`
         - `mod_reqtimeout` を有効にする
@@ -37,11 +31,6 @@ Webページ（ `bravo` , FreeBSD）にアクセスしてからページがな�
     - 少なすぎたら適宜増やす
 
 ## 問題発火
-### DNS Flood
-```sh
-$ sudo ./dnsflood asdf.asdf.asdf.asdf.com TARGETIP -t ANY -s 10.1.240.123 -p 53
-```
-
 ### HTTP DoS (Slow HTTP POST Attack)
 ```sh
 # Note: This Dockerfile uses multi stage build

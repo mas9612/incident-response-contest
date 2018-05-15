@@ -51,7 +51,7 @@
 
 ## Scenarios
 1. [ページ内の画像が表示されない](scenarios/file-permission/README.md)
-1. [Webページが開けない](scenarios/dos-attack/README.md)
+1. [Webページが開けない](scenarios/dos-attack/slow-http-post/README.md)
 1. [SSHでログインできない](scenarios/cannot-ssh-login/README.md)
 1. [xxxxx](scenarios/xxxxx.md)
 
