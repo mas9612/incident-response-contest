@@ -11,8 +11,9 @@
     owner: root
     group: root
   with_items:
-    - { src: "templates/centos-httpd.conf", dest: "/etc/httpd/conf/httpd.conf" }
-    - { src: "templates/centos-userdir.conf", dest: "/etc/httpd/conf.d/userdir.conf" }
+    - { src: "templates/centos-httpd.conf",    dest: "/etc/httpd/conf/httpd.conf" }
+    - { src: "templates/centos-userdir.conf",  dest: "/etc/httpd/conf.d/userdir.conf" }
+    - { src: "templates/centos-00-base.conf" , dest: "/etc/httpd/conf.modules.d/00-base.conf"}
   when: ansible_distribution == "CentOS"
 
 - name: Start and Enable Apache (CentOS)
