@@ -13,13 +13,14 @@
     group: wheel
   with_items:
     - { src: "templates/freebsd-httpd.conf", dest: "/usr/local/etc/apache24/httpd.conf" }
+    - { src: "templates/freebsd-httpd-default.conf", dest: "/usr/local/etc/apache24/extra/httpd-default.conf" }
   when: ansible_distribution == "FreeBSD"
 
 - name: Start and Enable Apache (FreeBSD)
   service:
     name: apache24
     enabled: yes
-    state: started
+    state: restarted
   when: ansible_distribution == "FreeBSD"
 
 - name: Change permission for each user's home directory
