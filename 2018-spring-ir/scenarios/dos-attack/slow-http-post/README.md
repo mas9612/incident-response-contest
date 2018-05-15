@@ -29,6 +29,7 @@ Webページ（ `bravo` , FreeBSD）にアクセスしてからページがな�
 * ref.) https://news.mynavi.jp/article/20151228-a347/
 * `MaxRequestWorkers` の設定も一応確認しておくと良いかも
     - 少なすぎたら適宜増やす
+* Slow HTTP DoS対策についての参考: http://blog.shekyan.com/2011/11/how-to-protect-against-slow-http-attacks.html
 
 ## 問題発火
 ### HTTP DoS (Slow HTTP POST Attack)
