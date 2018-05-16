@@ -15,9 +15,6 @@
 │       ├── dns
 │       │   ├── tasks
 │       │   └── templates
-│       ├── mail
-│       │   ├── tasks
-│       │   └── templates
 │       └── web
 │           ├── tasks
 │           └── templates
@@ -35,25 +32,27 @@
 ├── scenarios
 │   ├── cannot-ssh-login
 │   ├── dos-attack
+│   │   ├── dns-flood
+│   │   │   └── dns-flood-docker
+│   │   └── slow-http-post
+│   │       └── slowhttptest-docker
 │   └── file-permission
 └── util
 ```
 
 ## Contest Date
-2018/05/xx
+2018/05/21 Mon, 18:00-
 
 ## Servers
 * Web (FreeBSD, CentOS)
     - FreeBSD: `bravo`
     - CentOS: `victor`
 * DNS (FreeBSD)
-* Mail (FreeBSD)
 
 ## Scenarios
 1. [ページ内の画像が表示されない](scenarios/file-permission/README.md)
 1. [Webページが開けない](scenarios/dos-attack/slow-http-post/README.md)
 1. [SSHでログインできない](scenarios/cannot-ssh-login/README.md)
-1. [xxxxx](scenarios/xxxxx.md)
 
 ## Bootstrapping
 * CentOS (CentOS 7)

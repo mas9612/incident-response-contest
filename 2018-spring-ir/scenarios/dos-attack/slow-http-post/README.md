@@ -26,6 +26,8 @@ Webページ（ `bravo` , FreeBSD）にアクセスしてからページがな�
         - `mod_reqtimeout` の設定
             - `RequestReadTimeout` : Apache 2.4のデフォルトは `header=20-40,MinRate=500 body=20,MinRate=500`
             - doc.) https://httpd.apache.org/docs/2.4/mod/mod_reqtimeout.html
+* `mod_limitipconn` というのもあります
+    - 2次予選の時に運営に提案したものの放置されて終わったので，白浜では使えないかも
 * ref.) https://news.mynavi.jp/article/20151228-a347/
 * `MaxRequestWorkers` の設定も一応確認しておくと良いかも
     - 少なすぎたら適宜増やす
