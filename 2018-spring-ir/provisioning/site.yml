@@ -9,8 +9,3 @@
   roles:
     - common
     - dns
-
-- hosts: mail
-  roles:
-    - common
-    - mail
