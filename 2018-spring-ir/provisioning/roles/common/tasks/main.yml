@@ -1,3 +1,11 @@
+- name: Set hostname (CentOS)
+  hostname:
+    name: victor.ir.local
+
+- name: Set hostname (FreeBSD)
+  hostname:
+    name: bravo.ir.local
+
 - name: Install epel repository (CentOS)
   yum:
     name: epel-release
