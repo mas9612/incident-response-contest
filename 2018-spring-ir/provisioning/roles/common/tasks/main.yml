@@ -8,6 +8,13 @@
     name: bravo.ir.local
   when: ansible_distribution == "FreeBSD"
 
+- name: Edit hostname in /etc/rc.conf (FreeBSD)
+  lineinfile:
+    path: /etc/rc.conf
+    regexp: '^hostname='
+    line: 'hostname="bravo.ir.local"'
+  when: ansible_distribution == "FreeBSD"
+
 - name: Install epel repository (CentOS)
   yum:
     name: epel-release
