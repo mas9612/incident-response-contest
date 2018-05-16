@@ -1,10 +1,12 @@
 - name: Set hostname (CentOS)
   hostname:
     name: victor.ir.local
+  when: ansible_distribution == "CentOS"
 
 - name: Set hostname (FreeBSD)
   hostname:
     name: bravo.ir.local
+  when: ansible_distribution == "FreeBSD"
 
 - name: Install epel repository (CentOS)
   yum:
