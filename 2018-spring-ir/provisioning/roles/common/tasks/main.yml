@@ -70,6 +70,10 @@
     state: present
   when: ansible_distribution == "CentOS"
 
+- name: Restart eno16777984 (CentOS)
+  shell: nmcli c down eno16777984 && nmcli c up eno16777984
+  when: ansible_distribution == "CentOS"
+
 - name: Copy chrony.conf (CentOS)
   copy:
     src: templates/chrony.conf
