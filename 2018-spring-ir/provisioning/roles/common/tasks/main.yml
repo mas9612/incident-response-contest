@@ -15,6 +15,23 @@
     line: 'hostname="bravo.ir.local"'
   when: ansible_distribution == "FreeBSD"
 
+- name: Set DNS Server (FreeBSD)
+  copy:
+    src: templates/freebsd-resolv.conf
+    dest: /etc/resolv.conf
+    mode: 0644
+    owner: root
+    group: wheel
+  when: ansible_distribution == "FreeBSD"
+
+- name: Set DNS Server (CentOS)
+  nmcli:
+    conn_name: eno16777984
+    dns4:
+      - 10.1.240.102
+    state: present
+  when: ansible_distribution == "CentOS"
+
 - name: Install epel repository (CentOS)
   yum:
     name: epel-release
