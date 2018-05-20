@@ -19,7 +19,7 @@ def main():
     with paramiko.SSHClient() as ssh:
         ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         ssh.connect(hostname=args.host, port=22, username=args.user,
-                    password=args.password)
+                    look_for_keys=False, password=args.password)
 
         command = """
 mkdir -p ~/.ssh/;
