@@ -4,7 +4,7 @@ cd `dirname $0`
 
 # TODO: to be able to give these value as command line args
 USER=shiraishi
-HOST=10.1.240.131
+HOST=10.1.240.122
 
 # crack shiraishi's password with hydra
 echo "Cracking SSH password..."
