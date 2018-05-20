@@ -10,5 +10,5 @@ $TTL 3h
 
     IN NS  bravo.ir.local.
 
-20  IN PTR bravo.ir.local.
-21  IN PTR victor.ir.local.
+121  IN PTR bravo.ir.local.
+122  IN PTR victor.ir.local.

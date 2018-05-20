@@ -11,5 +11,5 @@ $TTL 3h
     IN NS bravo.ir.local.
 
 localhost IN A 127.0.0.1
-bravo     IN A 10.1.251.20
-victor    IN A 10.1.251.21
+bravo     IN A 10.1.251.121
+victor    IN A 10.1.251.122
