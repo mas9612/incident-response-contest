@@ -2,11 +2,11 @@
 
 # serve external services (hosting server)
 [web-freebsd]
-10.1.240.121 ansible_user=koba ansible_python_interpreter=/usr/local/bin/python2.7
+10.1.251.121 ansible_user=koba ansible_python_interpreter=/usr/local/bin/python2.7
 
 # serve internal services
 [web-centos]
-10.1.240.122 ansible_user=koba
+10.1.251.122 ansible_user=koba
 
 [dns]
-10.1.240.121 ansible_user=koba ansible_python_interpreter=/usr/local/bin/python2.7
+10.1.251.121 ansible_user=koba ansible_python_interpreter=/usr/local/bin/python2.7
