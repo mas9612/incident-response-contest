@@ -68,6 +68,7 @@
     type: ethernet
     dns4:
       - 10.1.251.122
+      - 10.1.3.21
     state: present
   when: ansible_distribution == "CentOS"
 
