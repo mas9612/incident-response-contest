@@ -67,7 +67,7 @@
     conn_name: eno16777984
     type: ethernet
     dns4:
-      - 10.1.240.102
+      - 10.1.251.122
     state: present
   when: ansible_distribution == "CentOS"
 
