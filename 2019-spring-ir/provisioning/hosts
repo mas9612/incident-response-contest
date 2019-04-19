@@ -1,9 +1,15 @@
-# Note: each server must have `koba` user to execute ansible tasks
-
 # serve external services (hosting server)
 [web-freebsd]
-10.1.251.121 ansible_user=koba ansible_python_interpreter=/usr/local/bin/python2.7
+10.1.171.200 ansible_user=manager ansible_python_interpreter=/usr/local/bin/python2.7
+10.1.171.201 ansible_user=manager ansible_python_interpreter=/usr/local/bin/python2.7
+10.1.171.202 ansible_user=manager ansible_python_interpreter=/usr/local/bin/python2.7
+10.1.171.203 ansible_user=manager ansible_python_interpreter=/usr/local/bin/python2.7
+10.1.171.204 ansible_user=manager ansible_python_interpreter=/usr/local/bin/python2.7
 
 # serve internal services
 [web-centos]
-10.1.251.122 ansible_user=koba
+10.1.251.100 ansible_user=manager
+10.1.251.101 ansible_user=manager
+10.1.251.102 ansible_user=manager
+10.1.251.103 ansible_user=manager
+10.1.251.104 ansible_user=manager
