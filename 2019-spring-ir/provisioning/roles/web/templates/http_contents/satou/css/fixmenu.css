@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+
+/*メインメニューが画面上部に到達した際の設定ファイル
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*fixmenuブロック*/
+body.is-fixed .nav-fix-pos {
+	width: 100%;z-index: 100;position: fixed;top: 0;left: 0;
+}
+/*headerブロック*/
+body.is-fixed .header {
+	margin-bottom: 60px;	/*メインメニューの高さ(height40 + padding10 + padding10)と同じサイズを指定する*/
+}
+/*メインメニューの設定*/
+body.is-fixed #menubar {
+	background: #fff;		/*背景色。半透明を維持したいならこの１行は削除。*/
+	border: 1px solid #ccc;	/*枠線の幅、線種、色*/
+	border-top: none;		/*上の線だけ消す*/
+	-webkit-box-shadow: 0px 3px 5px rgba(0,0,0,0.1);	/*影の設定。右・下・ぼかし幅・色(rgba)の設定。rgba値は左３つが色指定(この場合は黒)で最後の0.1は透明度10%の事。*/
+	box-shadow: 0px 3px 5px rgba(0,0,0,0.1);			/*同上*/
+	border-radius: 0px 0px 10px 10px !important;		/*角丸のサイズ。左上、右上、右下、左下の順番。*/
+}
+
+
+
+/*画面幅800px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:800px){
+
+body.is-fixed .header {
+	margin-bottom: 0px;	/*fixmenuから折りたたみメニューになるので、ここはリセット。*/
+}
+
+}

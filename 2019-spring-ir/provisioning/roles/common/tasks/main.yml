@@ -1,0 +1,112 @@
+- name: Set hostname (CentOS)
+  hostname:
+    name: victor.ir.local
+  when: ansible_distribution == "CentOS"
+
+- name: Set hostname (FreeBSD)
+  hostname:
+    name: bravo.ir.local
+  when: ansible_distribution == "FreeBSD"
+
+- name: Edit hostname in /etc/rc.conf (FreeBSD)
+  lineinfile:
+    path: /etc/rc.conf
+    regexp: '^hostname='
+    line: 'hostname="bravo.ir.local"'
+  when: ansible_distribution == "FreeBSD"
+
+- name: Install epel repository (CentOS)
+  yum:
+    name: epel-release
+  when: ansible_distribution == "CentOS"
+
+- name: Update all packages (CentOS)
+  yum:
+    name: '*'
+    state: latest
+  when: ansible_distribution == "CentOS"
+
+- name: Install base packages (CentOS)
+  yum:
+    name: "{{ item }}"
+  with_items:
+    - chrony
+    - firewalld
+    - vim
+    - bind-utils
+    - python-gobject
+    - NetworkManager-glib
+    - net-tools
+  when: ansible_distribution == "CentOS"
+
+- name: Install base packages (FreeBSD)
+  pkgng:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - vim
+  when:
+    ansible_distribution == "FreeBSD"
+
+- name: Install SELinux Library
+  yum:
+    name: libselinux-python
+  when: ansible_distribution == "CentOS"
+
+- name: Set DNS Server (FreeBSD)
+  copy:
+    src: templates/freebsd-resolv.conf
+    dest: /etc/resolv.conf
+    mode: 0644
+    owner: root
+    group: wheel
+  when: ansible_distribution == "FreeBSD"
+
+- name: Copy chrony.conf (CentOS)
+  copy:
+    src: templates/chrony.conf
+    dest: /etc/chrony.conf
+    mode: 0644
+    owner: root
+    group: root
+  when: ansible_distribution == "CentOS"
+
+- name: Start and Enable services (CentOS)
+  systemd:
+    name: "{{ item }}"
+    enabled: yes
+    state: started
+  with_items:
+    - chronyd.service
+    - firewalld.service
+  when: ansible_distribution == "CentOS"
+
+- name: Disable SELinux - setenforce (CentOS)
+  shell: setenforce 0
+  when: ansible_distribution == "CentOS"
+
+- name: Disable SELinux - Copy config file (CentOS)
+  copy:
+    src: templates/selinux.config
+    dest: /etc/selinux/config
+    mode: 0644
+    owner: root
+    group: root
+  when: ansible_distribution == "CentOS"
+
+- name: Add users
+  user:
+    name: "{{ item.name }}"
+    shell: "{{ item.shell }}"
+    password: "{{ item.password | password_hash('sha512') }}"
+  with_items:
+    - { name: "hayashi",   shell: "/bin/sh", password: "jafb7537am" }
+    - { name: "inoue",     shell: "/bin/sh", password: "Co39ke117426" }
+    - { name: "kobayasi",  shell: "/bin/sh", password: "865f4db6cf" }
+    - { name: "kojima",    shell: "/bin/sh", password: "alesdfaxb1_NOBLE" }
+    - { name: "nishino",   shell: "/bin/sh", password: "fuckme3n_troy" }
+    - { name: "satou",     shell: "/bin/sh", password: "diaz107asdf929" }
+    - { name: "shiraishi", shell: "/bin/sh", password: "awachan4410" }
+    - { name: "takei",     shell: "/bin/sh", password: "coppebansr2222" }
+    - { name: "tanaka",    shell: "/bin/sh", password: "smm4liasdlfe" }
+    - { name: "yamamoto",  shell: "/bin/sh", password: "c8aeoaiweu3z" }

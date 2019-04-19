@@ -1,0 +1,323 @@
+
+.PC{
+  display: none !important;
+}
+
+h1{
+    margin: 5vh auto 5vh auto;
+    line-height: 1.5em;
+    font-size: 1.8em;
+}
+
+.otherHeader {
+  height: 65vh;
+}
+
+.kobasemi {
+  margin: 0 auto;
+}
+
+.kobasemi h1 {
+  font-size: 7.4vw;
+  margin: 0.5vh auto;
+  line-height: 10vh;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.topIcon{
+  width:10vw;
+  margin : auto 3vw;
+  vertical-align: middle;
+}
+
+.topslider li a {
+  /*width: calc( 100% - 3rem);*/
+}
+
+
+.topSlide {
+  height: 72vh;
+}
+
+.otherSlide {
+  height: 40vh;
+}
+
+
+.topslider .description {
+  position: absolute;
+
+  bottom: 1rem;
+  right: 1rem;
+}
+#spNav{
+  height:11vh;
+  width:100%;
+  margin: auto;
+  background-color: #fff;
+}
+#spNav.fixed{
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+#spNav ul{
+  width: 100%;
+  height: auto;
+}
+#spNav li{
+  width:7vh;
+  margin: 2vh auto;
+  margin-right:calc( ( 90vw - 28vh ) / 5 );
+  letter-spacing: 0;
+  line-height: 1rem;
+}
+#spNav li:first-child{
+  margin-left:calc( ( 90vw - 28vh ) / 5 );
+}
+#spNav li div{
+  margin:0  auto;
+  text-align: center;
+  color: #777;
+}
+#spNav a{
+  display: block;
+}
+
+.navIcon{
+  font-size: 6vh;
+}
+.navDes{
+  font-size: 1.5vw;
+  font-feature-settings: "palt";
+}
+
+#topUnder{
+  height:2vh;
+}
+
+
+#topicBtn{
+  font-size: 8vh;
+  margin:2vh auto;
+}
+
+
+#news{
+  margin:auto;
+  padding:0;
+  background-image: url(../img/newsSP.jpg);
+  background-attachment:local;
+  -webkit-background-size: cover;
+  background-size: cover;
+  /*background-size: cover;*/
+}
+
+.bgImgBox>img {
+  height: 100%;
+}
+
+#newsBox {
+  width: 90%;
+  height: 20vh;
+  padding: 0.5rem;
+}
+
+#newsBox ul {
+  width: 90%;
+  height: 20vh;
+}
+
+#newsBox li {
+  /*line-height: 2rem;*/
+  font-size: 1rem;
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  min-height: auto;
+}
+
+#sitemap>ul{
+  margin:2em auto;
+  text-align: center;
+}
+#sitemap>ul>li{
+letter-spacing: 0px;
+text-align: left;
+width: 15em;
+margin:0.5em auto;
+  /*display: block;;*/
+}
+
+#footer-logo img {
+  width: 10vw;
+  margin: 1vh 5vw;
+}
+
+footer small{
+  position: static;
+  -webkit-transform: none;
+  transform: none;
+}
+
+
+
+/*
+    topic
+              */
+.topicHeader{
+  height: 10vh;
+}
+.topicImg{
+  width:80%;
+  height: 20vh;
+}
+
+#topic h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+#topic p {
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+/*
+      about
+                */
+#teacher {
+  background-image: url(../img/topic/koba04SP.jpg);
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+}
+
+#teacher:hover {
+  background-image: url(../img/topic/koba05SP.jpg);
+}
+
+#teacher dt {
+  text-align: center;
+}
+#teacher>ul>li:first-child {
+  /*width: 65%;*/
+  text-align: center;
+  padding-right: 0 ;
+  margin-top:1em;
+}
+#teacher_name{
+  line-height: 2em;
+}
+#memlist {
+  margin: 4em auto;
+}
+
+#memlist>li>ul>li:first-child{
+  margin:auto;
+}
+#memlist>li>ul>li{
+  display: block;
+  text-align: center;
+}
+#memlist>li>ul>li>ul>li{
+  display: inline-block;
+  width: 3em;
+  margin: auto 0.5em;
+}
+/*
+#memlist li {
+  line-height: 2em;
+  letter-spacing: 0.3em;
+}
+
+#memlist>li {
+  margin: 2em 0;
+}
+
+#memlist>li>ul>li {
+  display: inline-block;
+  margin: 0 0.5em;
+  vertical-align: middle;
+  font-size: 1em;
+}
+
+#memlist>li>ul>li:first-child {
+  width: 6em;
+  font-size: 1.3em;
+  font-weight: 500;
+  text-align: right;
+}*/
+
+
+/*
+    office hour
+                */
+
+#messageWrap {
+  width: 100%;
+  padding: 0;
+  position: static;
+  margin: 8vh auto 8vh auto;
+}
+
+
+#messageWrap>img {
+  /*position: relative;*/
+  opacity: 1;
+  width: 80%;
+  transform: translate(0, 0);
+}
+
+#messageWrap .message {
+  width: 90%;
+  margin: 3em auto;
+}
+#messageWrap .message p {
+  position: static;
+  width: 80%;
+  margin: 3em auto;
+}
+
+#dateList{
+  margin: auto;
+}
+ul#dateList>li>ul:first-child>li{
+  font-size: 1em;
+}
+ul#dateList>li>ul>li:first-child {
+  width: 8rem;
+}
+ul#dateList>li>ul>li {
+  width: 5rem;
+  font-size: 0.9rem;
+}
+#numB2{
+  font-size: 1rem;
+}
+
+.office_hourDocSP{
+  text-align: center;
+  margin: 3em auto;
+}
+
+.office_hourDocSP a{
+  color: #87cefa;
+}
+
+#annual {
+  font-size: 1rem;
+}
+
+#annual>ul>li:first-child {
+  font-size: 1.1em;
+}
+#annual>ul>li>ul>li {
+  width: 33%;
+}
